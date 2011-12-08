@@ -25,8 +25,7 @@ rails_master_hook = lambda do |env|
   end
 end
 
-run Rack::Builder.new {
-  map '/rails-master-hook' do
-    run rails_master_hook
-  end
-}
+map '/rails-master-hook' do
+  run rails_master_hook
+end
+
