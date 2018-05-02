@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Encapsulates Puma management via pumactl:
+#
+#   bin/server start
+#   bin/server restart
+#   bin/server stop
+#
+# Assumes cwd is the project root.
+exec bundle exec pumactl -F config/puma.rb "$@"
