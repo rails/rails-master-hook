@@ -4,14 +4,14 @@ GEM
     nio4r (2.5.8)
     puma (4.3.12)
       nio4r (~> 2.0)
-    rack (2.1.4.1)
+    rack (2.2.6.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   puma (~> 4.3)
-  rack (~> 2.1)
+  rack (~> 2.2)
 
 BUNDLED WITH
    2.5.22
