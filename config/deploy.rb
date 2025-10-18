@@ -8,5 +8,5 @@ set :deploy_to, "/home/rails/rails-master-hook-deploy"
 
 set :keep_releases, 5
 
-set :puma_bind, "tcp://0.0.0.0:9293"
+set :puma_bind, "tcp://0.0.0.0:9292"
 set :puma_systemctl_user, :system
