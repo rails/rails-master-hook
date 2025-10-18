@@ -28,3 +28,9 @@ map "/rails-master-hook" do
     end
   end
 end
+
+map "/" do
+  run ->(_env) do
+    [200, {"Content-Type" => "text/plain", "Content-Length" => "4"}, ["PONG"]]
+  end
+end
