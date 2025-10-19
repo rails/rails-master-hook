@@ -5,3 +5,7 @@ server DOCS_SERVER_IP, user: 'rails', roles: %w(web)
 
 set :rvm_ruby_version, '3.3.4'
 set :rvm_custom_path, '/home/rails/.rvm'
+
+set :puma_service_unit_env_vars, %w[
+  RUN_FILE=/home/rails/rails-master-hook/run-rails-master-hook
+]
