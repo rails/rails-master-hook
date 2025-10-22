@@ -14,7 +14,7 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
-    capistrano3-puma (7.0.0)
+    capistrano3-puma (7.1.0)
       capistrano (~> 3.7)
       capistrano-bundler
       puma (>= 6.1, < 8.0)
