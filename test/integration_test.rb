@@ -4,14 +4,16 @@ require_relative "test_helper"
 
 class IntegrationTest < TestCase
   def test_config_ru_app_behaves_correctly
-    app, _options = Rack::Builder.parse_file(File.expand_path("../config.ru", __dir__))
+    capture_io do
+      app, _options = Rack::Builder.parse_file(File.expand_path("../config.ru", __dir__))
 
-    env = Rack::MockRequest.env_for("/")
-    status, headers, body = app.call(env)
+      env = Rack::MockRequest.env_for("/")
+      status, headers, body = app.call(env)
 
-    assert_equal 200, status
-    assert_equal "PONG", body.first
-    assert_equal "text/plain", headers["Content-Type"]
+      assert_equal 200, status
+      assert_equal "PONG", body.first
+      assert_equal "text/plain", headers["Content-Type"]
+    end
   end
 
   def test_config_ru_rails_master_hook_endpoint

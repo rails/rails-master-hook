@@ -13,6 +13,7 @@ class RailsMasterHookApp
     @run_file = run_file || ENV["RUN_FILE"] || File.expand_path("../run-rails-master-hook", __dir__)
     @lock_file = lock_file || ENV["LOCK_FILE"]
     @logger = logger
+    logger.info "Initialized RailsMasterHookApp with run_file=#{@run_file} lock_file=#{@lock_file}"
   end
 
   def call(env)
